@@ -1,0 +1,12 @@
+type Item = 
+ record {
+   completed: bool;
+   id: nat;
+   "text": text;
+ };
+service : {
+  addItem: (text) -> (nat);
+  deleteItem: (nat) -> ();
+  getItems: () -> (vec Item) query;
+  toggleComplete: (nat) -> (bool);
+}
